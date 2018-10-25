@@ -1,6 +1,9 @@
 # Recursive-Output-Protobuf
 Recursive Output Protobuf
 
+## 下载
+可以直接到[下载页](https://github.com/hwhaocool/Recursive-Output-Protobuf/releases) 进行下载
+
 ## 功能
 因为在写`protobuf`的时候，可以依赖其他对象，其他对象又可以一直依赖下去  
 有时在公司协同合作的时候，需要把这些对象全部列出来  
