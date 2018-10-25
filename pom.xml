@@ -7,20 +7,13 @@
     <name>recusive-output-protobuf</name>
     <version>1.0.0</version>
 
-    <properties>
-        <jetty-version>9.2.9.v20150224</jetty-version>
-        <resteasy-version>3.0.18.Final</resteasy-version>
-        <slf4j-version>1.6.3</slf4j-version>
-        <junit-version>4.12</junit-version>
-        <servlet-api-version>3.1.0</servlet-api-version>
-        <spring.version>4.3.7.RELEASE</spring.version>
+    <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
         <defaultGoal>package</defaultGoal>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        
+        <sourceDirectory>src/main/java</sourceDirectory>        
 
         <plugins>
             <plugin>
@@ -52,11 +45,6 @@
     
     <dependencies>
 
-
-    </dependencies>
-
-
-
-    
+    </dependencies>   
 
 </project>
