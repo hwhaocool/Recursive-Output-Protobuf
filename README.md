@@ -20,7 +20,9 @@ Recursive Output Protobuf
 `mvn clean package`
 
 ## 运行
-`java -jar recusive-output-protobuf-1.0.0.jar`
+`java -Dfile.encoding=UTF-8 -jar recusive-output-protobuf-1.0.0.jar`
+
+一定要加上`-Dfile.encoding=UTF-8`哦，不然可能会乱码
 
 ## 界面
 
