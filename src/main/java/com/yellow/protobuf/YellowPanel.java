@@ -6,9 +6,12 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -239,8 +242,13 @@ public class YellowPanel {
         
     }
     
+    /**
+     * <br>填充 变量树形 面板
+     * @param fileName
+     * @author YellowTail
+     * @since 2018-12-26
+     */
     private void fillVarTreePanel(String fileName) {
-        
         
         DefaultTreeModel model = (DefaultTreeModel) this.varTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
@@ -250,7 +258,11 @@ public class YellowPanel {
         FileResult fileResult = fileRootNode.get(fileName);
         Hashtable<String, List<String>> varList = fileResult.getVarList();
         
-        for(String key : varList.keySet()) {
+        //排序，最后输出到 变量树形控件里，是name的逆序
+        List<String> varNameList = new ArrayList<>(varList.keySet());
+        Collections.sort(varNameList);
+        
+        for(String key : varNameList) {
             DefaultMutableTreeNode tempNode = new DefaultMutableTreeNode(key);
             model.insertNodeInto(tempNode, root, 0);
             
