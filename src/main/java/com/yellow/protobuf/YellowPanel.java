@@ -61,6 +61,11 @@ public class YellowPanel {
         frame.setVisible(true);
     }
     
+    /**
+     * <br>生成路径面板
+     * @author YellowTail
+     * @since 2018-12-26
+     */
     private void genPathPanel() {
         
         JPanel pathPanel = new JPanel();
@@ -123,6 +128,12 @@ public class YellowPanel {
         this.searchPanel = searchPanel;
     }
     
+    /**
+     * <br>得到输入面板
+     * @return
+     * @author YellowTail
+     * @since 2018-12-26
+     */
     private JPanel genInputPanel() {
         genPathPanel();
         genSearchPanel();
@@ -137,6 +148,12 @@ public class YellowPanel {
         return inputPanel;
     }
     
+    /**
+     * <br>生成树形面板
+     * @return
+     * @author YellowTail
+     * @since 2018-12-26
+     */
     private JPanel genTreePanel() {
         JPanel treePanel = new JPanel();
         
@@ -145,6 +162,7 @@ public class YellowPanel {
         
         DefaultMutableTreeNode node1 = new DefaultMutableTreeNode("Root");
         
+        //左侧第一个，文件列表树
         this.fileTree = new JTree(node1);
         
         TitledBorder bFile = BorderFactory.createTitledBorder("File List");
@@ -163,6 +181,7 @@ public class YellowPanel {
             }
         });
         
+        //左侧第二个，变量列表树
         DefaultMutableTreeNode node2 = new DefaultMutableTreeNode("Root");
         this.varTree = new JTree(node2);
         TitledBorder bVar = BorderFactory.createTitledBorder("Var List");
@@ -186,6 +205,7 @@ public class YellowPanel {
             }
         });
         
+        //左侧第三个，输出的文本域
         this.output = new JTextArea("xixi");
         TitledBorder bO = BorderFactory.createTitledBorder("Output");
         output.setBorder(bO);
