@@ -211,10 +211,11 @@ public class YellowPanel {
         output.setBorder(bO);
         output.setEditable(false);
         
+        //带滚动条的面板
         JScrollPane jScrollPane = new JScrollPane(output);
         
-        treePanel.add(fileTree);
-        treePanel.add(varTree);
+        treePanel.add(new JScrollPane(fileTree));
+        treePanel.add(new JScrollPane(varTree));
         treePanel.add(jScrollPane);
         
         
